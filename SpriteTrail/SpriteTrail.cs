@@ -36,13 +36,15 @@ namespace EvertaleGames
 
     IEnumerator TrailCoroutine()
     {
+      WaitForSeconds wait = new WaitForSeconds(interval);
+
       while (true)
       {
         if (ShouldCreateSpriteTrail())
           CreateTrailSprite();
 
         lastPosition = transform.position;
-        yield return new WaitForSeconds(interval);
+        yield return wait;
       }
     }
 
@@ -50,7 +52,7 @@ namespace EvertaleGames
     {
       Vector2 lastSpriteTrailPosition =
         list.Count > 0
-          ? (Vector2) list[list.Count - 1].gameObject.transform.position
+          ? (Vector2)list[list.Count - 1].gameObject.transform.position
           : lastPosition;
 
       return Vector2.Distance(transform.position, lastSpriteTrailPosition) >= minDistance;
