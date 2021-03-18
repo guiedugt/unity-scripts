@@ -53,6 +53,7 @@ namespace EvertaleGames
         yield return null;
       }
 
+      yield return null;
       callback();
     }
   }
