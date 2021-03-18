@@ -24,12 +24,12 @@ namespace EvertaleGames
       lastPosition = transform.position;
     }
 
-    public void OnEnable()
+    void OnEnable()
     {
       trailCoroutine = StartCoroutine(TrailCoroutine());
     }
 
-    public void OnDisable()
+    void OnDisable()
     {
       StopCoroutine(trailCoroutine);
     }
