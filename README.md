@@ -10,3 +10,6 @@ Applies Parallax effect to 2D scenes using an orthographic camera
 
 ## SmoothCameraFollow
 A simple camera follow with smooth movement
+
+## SpriteTrail
+Leaves a trail behind the sprite as the game object moves
